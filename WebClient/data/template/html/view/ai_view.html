@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Website Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            width: 300px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+		.card-title {
+			display: flex;
+			justify-content: left; /* 水平左对齐 */
+			align-items:center; /* 垂直居中 */
+			width: 100%;
+			height: 30px;
+		}
+
+		.card-title img {
+			margin-left: 15px;
+		}
+
+		.card-title p {
+			margin-left: 5px;
+		}
+
+        .card-content {
+            padding: 20px;
+			text-align: left;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+		<a href="https://yiyan.baidu.com/">
+			<div class="card-title">
+				<img src="../statics/imgs/yiyan-logo.png" alt="文心一言" width="80" height="20">
+			</div>
+
+        	<div class="card-content">
+            	<h2>文心一言</h2>
+            	<p>文心一言（英文名：ERNIE Bot）是百度全新一代知识增强大语言模型，文心大模型家族的新成员，能够与人对话互动，回答问题，协助创作，高效便捷地帮助人们获取信息、知识和灵感。文心一言是知识增强的大语言模型，基于飞桨深度学习平台和文心知识增强大模型，持续从海量数据和大规模知识中融合学习具备知识增强、检索增强和对话增强的技术特色.</p>
+        	</div>
+		</a>
+    </div>
+
+    <div class="card">
+		<a href="https://tongyi.aliyun.com/">
+			<div class="card-title">
+				<img src="../statics/imgs/tongyi-logo.svg" alt="通义千问" width="20" height="20">
+				<p>通义千问</p>
+			</div>
+			<div class="card-content">
+				<h2>通义千问</h2>
+				<p>通义千问，是阿里云推出的一个超大规模的语言模型，功能包括多轮对话、文案创作、逻辑推理、多模态理解、多语言支持。能够跟人类进行多轮的交互，也融入了多模态的知识理解，且有文案创作能力，能够续写小说，编写邮件等。.</p>
+			</div>
+		</a>
+    </div>
+
+    
+
+
+</div>
+
+</body>
+
+</html>

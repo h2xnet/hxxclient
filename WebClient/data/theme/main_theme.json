@@ -1,0 +1,291 @@
+{
+	"mainWnd": {
+		"minWndWidth": 400,
+		"minWndHeight": 600,
+		"defWndWidth": 1024,
+		"defWndHeight": 768,
+		"defMaximized": true,
+		"backgroundModel": "color",
+		"backgroundColor": "#C3C3C3",
+		"backgroundImage": "",
+		"radius": 4,
+		"borderWidth": 1,
+		"borderColor": "#CCCCCC",
+		"shadow": {
+			"width": 0,
+			"height": 0,
+			"horizontalOffset": 2,
+			"verticalOffset": 3,
+			"radius": 7.0,
+			"sample": 17,
+			"spread": 0,
+			"color": "#FF2849"
+		},
+		"systrap": {
+			"visiable": true,
+			"tipText": "智慧客户端",
+			"imgPath": "qrc:/statics/logo/logo264.png"
+		}
+	},
+	"titleBar": {
+		"height": 50,
+		"radius": 4,
+		"backgroundColor": "#F5F5F5",
+		"icon": {
+			"width": 32,
+			"height": 32,
+			"imgPath": "qrc:/statics/logo/logo2128.png",
+			"leftPadding": 15,
+			"topPadding": 8
+		},
+		"title": {
+			"text":"智慧客户端",
+			"fontPixelSize": 18,
+			"fontColor": "#000000",
+			"align": "left",
+			"leftPadding": 55,
+			"topPadding": 15,
+			"bold":true
+		},
+		"systemMenu": {
+			"menus": [
+				{
+					"id": "systemMenuMinId",
+					"visiable": true,
+					"tipText": "最小化",
+					"width": 24,
+					"height": 24,
+					"imageWidth": 14,
+					"imageHeight": 14,
+					"imgPath": "qrc:/statics/imgs/minus.png",
+					"backgroundColor": "transparent",
+					"topPadding": 10,
+					"rightPadding": 95,
+					"borderWidth": 1,
+					"borderColor": "#CCCCCC",
+					"borderVisiable": false,
+					"hoverBorderVisiable": true
+				},
+				{
+					"id": "systemMenuMaxId",
+					"visiable": true,
+					"tipText": "最大化",
+					"width": 24,
+					"height": 24,
+					"imageWidth": 14,
+					"imageHeight": 14,
+					"imgPath": "qrc:/statics/imgs/maximize.png",
+					"backgroundColor": "transparent",
+					"topPadding": 10,
+					"rightPadding": 55,
+					"borderWidth": 1,
+					"borderColor": "#CCCCCC",
+					"borderVisiable": false,
+					"hoverBorderVisiable": true
+				},
+				{
+					"id": "systemMenuCloseId",
+					"visiable": true,
+					"tipText": "关闭",
+					"width": 24,
+					"height": 24,
+					"imageWidth": 14,
+					"imageHeight": 15,
+					"imgPath":"qrc:/statics/imgs/close_svg.svg",
+					"backgroundColor": "transparent",
+					"topPadding": 10,
+					"rightPadding": 15,
+					"borderWidth": 1,
+					"borderColor": "#CCCCCC",
+					"borderVisiable": false,
+					"hoverBorderVisiable": true
+				}
+			]
+		}
+	},
+	"tabHeadBar": {
+		"visiable": true
+	},
+	"statusBar": {
+		"height": 30,
+		"backgroundColor": "#F5F5F5",
+		"borderWidth": 1,
+		"borderColor": "#CCCCCC",
+		"radius": 4
+	},
+	"leftPanel": {
+		"foldState": true,
+		"foldWidth": 70,
+		"unfoldWidth": 140,
+		"backgroundColor":"#C3C3C3",
+		"radius": 0,
+		"borderWidth": 1,
+		"borderColor": "#CCCCCC",
+		"menuBackgroundColor": "#FCFCFC",
+		"menuCheckedBackgroundColor": "#555555",
+		"menuTopPadding": 10,
+		"menuBottomPadding": 10,
+		"menuSpaceWidth": 10,
+		"menuHeight": 70,
+		"menuBorderWidth": 0,
+		"menuBoorderColor": "#CCCCCC",
+		"menuRadius": 4,
+		"menuHoverOpacity": 0.8,
+		"menuAllowCancel": false,
+		"currentIndex": -1,
+		"menus": [
+			{
+				"id":"menuBaiduId",
+				"align": "top",
+				"topPadding": 0,
+				"bottomPadding": 0,
+				"text": "百度",
+				"textLeftPadding": 45,
+				"textFontPixelSize": 16,
+				"textFontColor": "#333333",
+				"textBold": false,
+				"imgPath": "qrc:/statics/imgs/panel/baidu64.png",
+				"imgWidth": 32,
+				"imgHeight": 32,
+				"imgLeftPadding": 8,
+				"imgTopPadding": 8,
+				"execWay": "embedweb",
+				"execPath": "https://www.baidu.com",
+				"execCmd":"",
+				"execViewPath": "qrc:/uipages/webpage/WebPage.qml",
+				"page": {
+					"backgroundColor": "#FFFFFF",
+					"radius": 4,
+					"leftPadding": 0,
+					"topPadding": 0,
+					"rightPadding": 0,
+					"bottomPadding": 0
+				}
+			},
+			{
+				"id":"menuXiaohushuId",
+				"align": "top",
+				"topPadding": 0,
+				"bottomPadding": 0,
+				"text": "必应",
+				"textLeftPadding": 45,
+				"textFontPixelSize": 16,
+				"textFontColor": "#333333",
+				"textBold": false,
+				"imgPath": "qrc:/statics/imgs/panel/microsoft64.png",
+				"imgWidth": 32,
+				"imgHeight": 32,
+				"imgLeftPadding": 8,
+				"imgTopPadding": 8,
+				"execWay": "embedweb",
+				"execPath": "https://cn.bing.com/",
+				"execCmd":"",
+				"execViewPath": "qrc:/uipages/webpage/WebPage.qml",
+				"page": {
+					"backgroundColor": "#FFFFFF",
+					"radius": 4,
+					"leftPadding": 0,
+					"topPadding": 0,
+					"rightPadding": 0,
+					"bottomPadding": 0
+				}
+			},
+			{
+				"id":"menuWeixinId",
+				"align": "top",
+				"topPadding": 0,
+				"bottomPadding": 0,
+				"text": "今日热榜",
+				"textLeftPadding": 45,
+				"textFontPixelSize": 16,
+				"textFontColor": "#333333",
+				"textBold": false,
+				"imgPath": "qrc:/statics/imgs/panel/today64.png",
+				"imgWidth": 32,
+				"imgHeight": 32,
+				"imgLeftPadding": 8,
+				"imgTopPadding": 8,
+				"execWay": "embedweb",
+				"execPath": "https://tophub.today/",
+				"execCmd":"",
+				"execViewPath": "qrc:/uipages/webpage/WebPage.qml",
+				"page": {
+					"backgroundColor": "#FFFFFF",
+					"radius": 4,
+					"leftPadding": 0,
+					"topPadding": 0,
+					"rightPadding": 0,
+					"bottomPadding": 0
+				}
+			},
+			{
+				"id":"menuAIId",
+				"align": "top",
+				"topPadding": 0,
+				"bottomPadding": 0,
+				"text": "AI导航",
+				"textLeftPadding": 45,
+				"textFontPixelSize": 16,
+				"textFontColor": "#333333",
+				"textBold": false,
+				"imgPath": "qrc:/statics/imgs/panel/AI64.png",
+				"imgWidth": 32,
+				"imgHeight": 32,
+				"imgLeftPadding": 8,
+				"imgTopPadding": 8,
+				"execWay": "embedweb",
+				"execPath": "/data/template/html/view/ai_view.html",
+				"execCmd":"",
+				"execViewPath": "qrc:/uipages/webpage/WebPage.qml",
+				"page": {
+					"backgroundColor": "#FFFFFF",
+					"radius": 4,
+					"leftPadding": 0,
+					"topPadding": 0,
+					"rightPadding": 0,
+					"bottomPadding": 0
+				}
+			},
+			{
+				"id":"menuSettingsId",
+				"align": "bottom",
+				"topPadding": 0,
+				"bottomPadding": 0,
+				"text": "设置",
+				"textLeftPadding": 45,
+				"textFontPixelSize": 16,
+				"textFontColor": "#333333",
+				"textBold": false,
+				"imgPath": "qrc:/statics/imgs/panel/settings64.png",
+				"imgWidth": 32,
+				"imgHeight": 32,
+				"imgLeftPadding": 8,
+				"imgTopPadding": 8,
+				"execWay": "poppage",
+				"execPath": "qrc:/uipages/settings/Settings.qml",
+				"execCmd":"",
+				"execViewPath": "",
+				"page": {
+					"backgroundColor": "#FFFFFF",
+					"radius": 8,
+					"borderWidth":1,
+					"borderColor": "#CCCCCC"
+				}
+			}
+		]
+	},
+	"pageBox": {
+		"radius": 4,
+		"backgroundColor": "#FFFFFF",
+		"spaceWidth": 0,
+		"spaceHeight": 0
+	},
+	"webToolBar":{
+		"radius":4,
+		"borderWidth":1,
+		"borderColor":"#DDDDDD",
+		"backgroundColor":"#C3C3C3",
+		"leftPadding": 10,
+		"bottomPadding": 10
+	}
+}
