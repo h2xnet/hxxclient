@@ -71,5 +71,10 @@
         <file>statics/logo/logo2128.png</file>
         <file>statics/imgs/panel/settings64.png</file>
         <file>statics/imgs/panel/settings128.png</file>
+        <file>statics/logo/logo3230.png</file>
+        <file>statics/logo/logo332.png</file>
+        <file>statics/logo/logo364.png</file>
+        <file>statics/logo/logo3128.png</file>
+        <file>statics/logo/logo3256.png</file>
     </qresource>
 </RCC>

@@ -24,7 +24,7 @@
 		"systrap": {
 			"visiable": true,
 			"tipText": "智慧客户端",
-			"imgPath": "qrc:/statics/logo/logo264.png"
+			"imgPath": "qrc:/statics/logo/logo3128.png"
 		}
 	},
 	"titleBar": {
@@ -34,7 +34,7 @@
 		"icon": {
 			"width": 32,
 			"height": 32,
-			"imgPath": "qrc:/statics/logo/logo2128.png",
+			"imgPath": "qrc:/statics/logo/logo3256.png",
 			"leftPadding": 15,
 			"topPadding": 8
 		},
