@@ -72,6 +72,58 @@ public:
      */
     Q_INVOKABLE QString getTitleBarLogoImg();
 
+    /*
+     * Func: setClientName
+     * Desc: 设置客户端名称
+     * Author: zfs
+     * Date: 2023-11-29 20:56
+     */
+    Q_INVOKABLE int setClientName(QString name);
+
+    /*
+     * Func: getClientName
+     * Desc: 获取客户端名称
+     * Author: zfs
+     * Date: 2023-11-29 20:56
+     */
+    Q_INVOKABLE QString getClientName();
+
+    /*
+     * Func: setVersion
+     * Desc: 设置版本号
+     * Author: zfs
+     * Date: 2023-11-29 20:57
+     */
+    Q_INVOKABLE int setVersion(QString version);
+
+    /*
+     * Func: getVersion
+     * Desc: 获取版本号
+     * Author: zfs
+     * Date: 2023-11-29 20:57
+     */
+    Q_INVOKABLE QString getVersion();
+
+    /*
+     * Func: setBuilder
+     * Desc: 设置编译号
+     * Author: zfs
+     * Date: 2023-11-29 20:58
+     */
+    Q_INVOKABLE int setBuilder(QString str);
+
+    /*
+     * Func: getBuilder
+     * Desc: 获取编译号
+     * Author: zfs
+     * Date: 2023-11-29 20:58
+     */
+    Q_INVOKABLE QString getBuilder();
+
+    Q_INVOKABLE QString getRunOS();
+
+    Q_INVOKABLE QString getRunOSVer();
+
 
 public slots:
 
@@ -100,6 +152,10 @@ signals:
 private:
 
     QString m_title_bar_logo_img; // 标题栏LOGO图片
+
+    QString m_client_name;
+    QString m_version;
+    QString m_builder;
 
 
 };

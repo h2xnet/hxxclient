@@ -97,5 +97,15 @@ Popup {
 
     }
 
+    //
+    // gotoGithub : 跳转Github
+    //
+    function gotoGithub() {
+        console.log("About.qml gotoGithub");
+
+        endShow();
+
+    }
+
 
 }

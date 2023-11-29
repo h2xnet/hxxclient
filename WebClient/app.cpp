@@ -1,6 +1,7 @@
 ﻿#include "app.h"
 
 #include "base/file/file_util.h"
+#include "base/util/system_util.h"
 
 //extern App g_app;
 
@@ -92,3 +93,55 @@ QString App::getTitleBarLogoImg() {
     return m_title_bar_logo_img;
 }
 
+int App::setClientName(QString name) {
+    if (name.isEmpty()) {
+        return -1;
+    }
+    m_client_name = name;
+    return 0;
+}
+
+QString App::getClientName() {
+    if (m_client_name.isEmpty()) {
+        m_client_name = "智慧客户端";
+    }
+    return m_client_name;
+}
+
+int App::setVersion(QString version) {
+    if (version.isEmpty()) {
+        return -1;
+    }
+    m_version = version;
+    return 0;
+}
+
+QString App::getVersion() {
+    if (m_version.isEmpty()) {
+        m_version = "0.1.0.0";
+    }
+    return m_version;
+}
+
+int App::setBuilder(QString str) {
+    if (str.isEmpty()) {
+        return -1;
+    }
+    m_builder = str;
+    return 0;
+}
+
+QString App::getBuilder() {
+    if (m_builder.isEmpty()) {
+        m_builder = "202311292103";
+    }
+    return m_builder;
+}
+
+QString App::getRunOS() {
+    return base::SystemUtil::getRunOS();
+}
+
+QString App::getRunOSVer() {
+    return base::SystemUtil::getRunOSVer();
+}

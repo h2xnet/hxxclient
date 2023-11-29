@@ -453,6 +453,17 @@ Window {
 
         let ret = -1;
         if (code === 0) {
+            // 基本信息
+            if (obj.hasOwnProperty('name')) {
+                AppId.setClientName(obj['name']);
+            }
+            if (obj.hasOwnProperty('version')) {
+                AppId.setVersion(obj['version']);
+            }
+            if (obj.hasOwnProperty('builder')) {
+                AppId.setBuilder(obj['builder']);
+            }
+
             // 解析主窗口主题数据
             if (obj.hasOwnProperty('mainWnd')) {
                 ret = Theme.parseMainThemeObj(code, obj["mainWnd"], mainWndId);

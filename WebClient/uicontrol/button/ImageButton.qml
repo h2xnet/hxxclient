@@ -15,6 +15,11 @@ Rectangle {
 
     property var tipText: ""
 
+    // 按钮文本
+    property int labelTextFontSize: 14
+    property var labelText: "" // 按钮文本
+    property var labelTextColor: "#156EFF"
+
     property var backgroundColor: "transparent" // 背景颜色
     property int borderRadius: 4
     property var hoverOpacity: 0.8
@@ -44,6 +49,17 @@ Rectangle {
         sourceSize.width: imgWidth
         sourceSize.height: imgHeight
 
+    }
+
+    // 居中显示
+    Text {
+        anchors.centerIn: parent
+
+        visible: (labelText === "" ? false : true)
+        font.pixelSize: labelTextFontSize
+        color: labelTextColor
+
+        text: labelText
     }
 
     ToolTip {

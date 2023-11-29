@@ -76,5 +76,9 @@
         <file>statics/logo/logo364.png</file>
         <file>statics/logo/logo3128.png</file>
         <file>statics/logo/logo3256.png</file>
+        <file>statics/imgs/blue_button_normal.png</file>
+        <file>statics/imgs/blue2_button_normal.png</file>
+        <file>statics/imgs/blue3_button_normal.png</file>
+        <file>statics/imgs/gray_button_normal.png</file>
     </qresource>
 </RCC>

@@ -10,7 +10,7 @@ SystemUtil::SystemUtil()
 }
 
 int SystemUtil::getOsType() {
-    QString kernerlType = QSysInfo::kernelType().toLower(); // 内核类型
+   QString kernerlType = QSysInfo::kernelType().toLower(); // 内核类型
    QString kernelVersion = QSysInfo::kernelVersion().toLower(); // 内核版本
 
    QString productType = QSysInfo::productType().toLower(); // 系统类型
@@ -43,6 +43,39 @@ int SystemUtil::getOsType() {
    }
 
    return ostype;
+}
+
+QString SystemUtil::getRunOS() {
+    QString prettyProductName = QSysInfo::prettyProductName().toLower(); // 系统名称
+
+    if (!prettyProductName.isEmpty()) {
+        return prettyProductName;
+    }
+
+    QString productType = QSysInfo::productType().toLower(); // 系统类型
+    QString productVersion = QSysInfo::productVersion().toLower(); // 系统版本
+    if (!productType.isEmpty() && !productVersion.isEmpty()) {
+        return QString("%1 %2").arg(productType).arg(productVersion);
+    }
+
+    QString kernerlType = QSysInfo::kernelType().toLower(); // 内核类型
+
+    return kernerlType;
+}
+
+QString SystemUtil::getRunOSVer() {
+    QString kernelVersion = QSysInfo::kernelVersion().toLower(); // 内核版本
+    if (!kernelVersion.isEmpty()) {
+        return kernelVersion;
+    }
+
+    QString productType = QSysInfo::productType().toLower(); // 系统类型
+    QString productVersion = QSysInfo::productVersion().toLower(); // 系统版本
+    if (!productType.isEmpty() && !productVersion.isEmpty()) {
+        return QString("%1 %2").arg(productType).arg(productVersion);
+    }
+
+    return productType;
 }
 
 

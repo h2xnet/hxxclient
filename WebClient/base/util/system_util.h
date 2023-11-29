@@ -40,6 +40,22 @@ public:
     */
    static int getOsType();
 
+   /*
+   * Func: getRunOS
+   * Desc: 获取运行系统
+   * Author: zfs
+   * Date: 2023-11-29 21:26
+   */
+   static QString getRunOS();
+
+   /*
+   * Func: getRunOSVer
+   * Desc: 获取运行系统版本信息
+   * Author: zfs
+   * Date: 2023-11-29 21:26
+   */
+   static QString getRunOSVer();
+
 
 };
 
