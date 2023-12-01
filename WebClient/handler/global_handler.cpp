@@ -3,6 +3,7 @@
 #include "app.h"
 #include "./base/schema_data.h"
 #include "./base/file/file_path.h"
+#include "./base/util/system_util.h"
 
 GlobalHandler::GlobalHandler()
 {
@@ -68,4 +69,11 @@ int GlobalHandler::setLogRange(int logRange) {
     bool bret = g_configure_service.setLogRange(logRange);
     qDebug() << "GlobalHandler::setLogRange 修改日志级别 状态:" << bret << ", 默认值:" << logRange;
     return bret ? 0 : -1;
+}
+
+bool GlobalHandler::openLocalUrl(const QString& url) {
+    bool bret = base::SystemUtil::openDesktopUrl(url);
+    qDebug() << "GlobalHandler::openLocalUrl 打开链接状态:" << bret   \
+             << ", 链接地址:" << url;
+    return bret;
 }

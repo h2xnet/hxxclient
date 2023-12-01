@@ -45,6 +45,14 @@ public:
 
     Q_INVOKABLE int setLogRange(int logRange);
 
+    /*
+     * Func: openLocalUrl
+     * Desc: 打开本地链接
+     * Author: zfs
+     * Date: 2023-12-01 08:09
+     */
+    Q_INVOKABLE bool openLocalUrl(const QString& url);
+
 
 public slots:
 

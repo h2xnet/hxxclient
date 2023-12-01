@@ -463,6 +463,12 @@ Window {
             if (obj.hasOwnProperty('builder')) {
                 AppId.setBuilder(obj['builder']);
             }
+            if (obj.hasOwnProperty('github')) {
+                AppId.setGithubUrl(obj['github']);
+            }
+            if (obj.hasOwnProperty('gitee')) {
+                AppId.setGiteeUrl(obj['gitee']);
+            }
 
             // 解析主窗口主题数据
             if (obj.hasOwnProperty('mainWnd')) {
@@ -476,7 +482,12 @@ Window {
                 console.log("main.qml onMainThemeDataEventRecv parseTitleBarThemeObj status:" + ret);
 
                 if (globalPropertyId.propertyControlId.titleBarLogoImgPath !== "") {
+                    // 保存标题栏logo图片地址
                     AppId.setTitleBarLogoImg(globalPropertyId.propertyControlId.titleBarLogoImgPath);
+
+                    // 设置消息提示框logo图片地址
+                    msgBoxId.logoImg = globalPropertyId.propertyControlId.titleBarLogoImgPath;
+
                 }
 
             }
@@ -650,7 +661,7 @@ Window {
                 onCloseApp(0);
             }
 
-            msgBoxId.beginShow(2, "确定要退出应用吗", "exitAppEvent", args);
+            msgBoxId.beginShow(2, "确定要退出应用吗", "警告", "exitAppEvent", args);
 
         }
         else if (source === "systemSettingId") {

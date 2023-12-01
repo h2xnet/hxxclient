@@ -15,6 +15,9 @@ Popup {
 
     signal msgBoxBtnClick(bool isYes, var source, var owner);
 
+    property var logoImg: ""
+    property var titleBarText: ""
+
     property var type: 0 // 0为确定，1为确定和取消，2为是和否
     property var labelText: ""
     property var backColor: "#000000"
@@ -83,6 +86,33 @@ Popup {
                 radius: borderRadius
                 border.width: titleBarBorderWidth
                 border.color: titleBarBorderColor
+
+                // logoImg
+                Image {
+                    anchors {
+                        left: parent.left
+                        leftMargin: 10
+                        verticalCenter: parent.verticalCenter
+                    }
+                    source: logoImg
+                    sourceSize.width: 24
+                    sourceSize.height: 24
+                }
+
+                // titleBarText
+                Text {
+
+                    anchors {
+                        left: parent.left
+                        leftMargin: 40
+                        verticalCenter: parent.verticalCenter
+                    }
+
+                    text: titleBarText
+                    font.bold: true
+
+                }
+
             } // end titleWinId Rectangle
 
             // 内容区域
@@ -204,9 +234,10 @@ Popup {
         console.debug("MessageWindow.qml onClosed.");
     }
 
-    function beginShow(messageType, message, source = "", owner = null) {
+    function beginShow(messageType, message, title = "", source = "", owner = null) {
         type = messageType;
         labelText = message;
+        titleBarText = title;
         sourceTag = source
         ownerData = owner;
 

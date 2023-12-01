@@ -56,6 +56,14 @@ public:
    */
    static QString getRunOSVer();
 
+   /*
+   * Func: openDesktopUrl
+   * Desc: 打开桌面链接
+   * Author: zfs
+   * Date: 2023-12-1 08:04
+   */
+   static bool openDesktopUrl(const QString& url);
+
 
 };
 

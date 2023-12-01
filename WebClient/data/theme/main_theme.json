@@ -1,4 +1,9 @@
 {
+	"name":"智慧客户端",
+	"version":"0.1.0.0",
+	"builder":"202311292050",
+	"github":"https://github.com/h2xnet/hxxclient",
+	"gitee":"",
 	"mainWnd": {
 		"minWndWidth": 400,
 		"minWndHeight": 600,

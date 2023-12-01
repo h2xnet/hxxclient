@@ -41,6 +41,8 @@ Rectangle {
     // 运行系统信息
     property var runOS: ""
     property var runOSVer: ""
+    property var githubUrl: ""
+    property var giteeUrl: ""
 
     anchors.fill: parent
 
@@ -225,14 +227,47 @@ Rectangle {
 
         // Github 按钮
         ImageButton {
-            id: githubBtnId
+            id: giteeBtnId
 
             anchors {
-                horizontalCenter: parent.horizontalCenter
+                left: parent.left
+                leftMargin: 80
                 bottom: parent.bottom
                 bottomMargin: 30
             }
 
+            visible: giteeUrl === "" ? false : true
+            imgPath: "qrc:/statics/imgs/gray_button_normal.png"
+            borderWidth: 0
+            imgWidth: 120
+            imgHeight: 50
+            width: 120
+            height: 50
+            borderRadius: 8
+            labelText: "Github"
+            labelTextFontSize: 24
+            labelTextColor: "#FFFFFF"
+
+            onImageButtonClicked: {
+
+                onGiteeBtnClick();
+
+            }
+
+        } // end giteeBtnId ImageButton
+
+        // Github 按钮
+        ImageButton {
+            id: githubBtnId
+
+            anchors {
+                right: parent.right
+                rightMargin: 80
+                bottom: parent.bottom
+                bottomMargin: 30
+            }
+
+            visible: githubUrl === "" ? false : true
             imgPath: "qrc:/statics/imgs/blue_button_normal.png"
             borderWidth: 0
             imgWidth: 120
@@ -271,10 +306,19 @@ Rectangle {
         controlId.runOS = AppId.getRunOS();
         controlId.runOSVer = AppId.getRunOSVer();
 
+        controlId.githubUrl = AppId.getGithubUrl();
+        controlId.giteeUrl = AppId.getGiteeUrl();
+
     }
 
     Component.onDestruction: {
 
+    }
+
+    function onGiteeBtnClick() {
+        if (parentControl) {
+            parentControl.gotoGitee(controlId.giteeUrl);
+        }
     }
 
     //
@@ -282,7 +326,7 @@ Rectangle {
     //
     function onGithubBtnClick() {
         if (parentControl) {
-            parentControl.gotoGithub();
+            parentControl.gotoGithub(controlId.githubUrl);
         }
     }
 

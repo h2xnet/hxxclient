@@ -145,3 +145,21 @@ QString App::getRunOS() {
 QString App::getRunOSVer() {
     return base::SystemUtil::getRunOSVer();
 }
+
+int App::setGithubUrl(QString url) {
+    m_github_url = url;
+    return 0;
+}
+
+QString App::getGithubUrl() {
+    return m_github_url;
+}
+
+int App::setGiteeUrl(QString url) {
+    m_gitee_url = url;
+    return 0;
+}
+
+QString App::getGiteeUrl() {
+    return m_gitee_url;
+}

@@ -124,6 +124,12 @@ public:
 
     Q_INVOKABLE QString getRunOSVer();
 
+    Q_INVOKABLE int setGithubUrl(QString url);
+    Q_INVOKABLE QString getGithubUrl();
+
+    Q_INVOKABLE int setGiteeUrl(QString url);
+    Q_INVOKABLE QString getGiteeUrl();
+
 
 public slots:
 
@@ -157,6 +163,8 @@ private:
     QString m_version;
     QString m_builder;
 
+    QString m_github_url;
+    QString m_gitee_url;
 
 };
 

@@ -100,10 +100,23 @@ Popup {
     //
     // gotoGithub : 跳转Github
     //
-    function gotoGithub() {
-        console.log("About.qml gotoGithub");
+    function gotoGithub(url) {
+        console.log("About.qml gotoGithub, url:" + url);
 
         endShow();
+
+        GlobalHandlerId.openLocalUrl(url);
+    }
+
+    //
+    // gotoGitee : 跳转Gitee
+    //
+    function gotoGitee(url) {
+        console.log("About.qml gotoGitee, url:" + url);
+
+        endShow();
+
+        GlobalHandlerId.openLocalUrl(url);
 
     }
 

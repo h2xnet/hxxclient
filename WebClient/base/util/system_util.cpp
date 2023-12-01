@@ -1,6 +1,8 @@
 #include "system_util.h"
 
 #include <QSysInfo>
+#include <QDesktopServices>
+#include <QUrl>
 
 namespace base {
 
@@ -76,6 +78,13 @@ QString SystemUtil::getRunOSVer() {
     }
 
     return productType;
+}
+
+bool SystemUtil::openDesktopUrl(const QString& url) {
+    if (url.isEmpty()) {
+        return false;
+    }
+    return QDesktopServices::openUrl(QUrl(url));
 }
 
 
