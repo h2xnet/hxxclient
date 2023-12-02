@@ -61,6 +61,31 @@ public:
      */
     Q_INVOKABLE int toolBarRequest(const QString& eventId, const QString& params);
 
+    /*
+     * Func: getFilePath
+     * Desc: 获取文件路径
+     * Author: zfs
+     * Date: 2023-12-02 10:02
+     */
+    Q_INVOKABLE QString getFilePath(const QString& fileName);
+
+    /*
+     * Func: jsonFileFormat
+     * Desc: JSON文件格式化
+     * Author: zfs
+     * Date: 2023-12-02 18:05
+     */
+    Q_INVOKABLE int jsonFileFormat(const QString& inputFileName,
+                                   const QString& outputFileName);
+
+    /*
+     * Func: fileNameToNative
+     * Desc: 文件名本地化
+     * Author: zfs
+     * Date: 2023-12-02 19:30
+     */
+    Q_INVOKABLE QString fileNameToNative(const QString& fileName);
+
 
 public slots:
 

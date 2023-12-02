@@ -51,6 +51,13 @@ public:
      */
     static bool fileIsExist(const QString& fileName);
 
+    /*
+     * Func: fileNameToNative
+     * Desc: 文件名本地化
+     * Author: zfs
+     * Date: 2023-12-02 19:25
+     */
+    static QString fileNameToNative(const QString& fileName);
 
 };
 

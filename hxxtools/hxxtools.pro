@@ -46,6 +46,7 @@ SOURCES += \
         base/schema_data.cpp \
         base/service/configure_service.cpp \
         base/util/system_util.cpp \
+        base/util/text_util.cpp \
         base/util/tool_util.cpp \
         handler/global_handler.cpp \
         handler/main_handler.cpp \
@@ -76,6 +77,7 @@ HEADERS += \
     base/schema_data.h \
     base/service/configure_service.h \
     base/util/system_util.h \
+    base/util/text_util.h \
     base/util/tool_util.h \
     handler/global_handler.h \
     handler/main_handler.h \

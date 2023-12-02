@@ -3,7 +3,9 @@
 #include "app.h"
 #include "./base/schema_data.h"
 #include "./base/file/file_path.h"
+#include "./base/file/file_util.h"
 #include "./base/util/system_util.h"
+#include "./base/util/text_util.h"
 
 GlobalHandler::GlobalHandler()
 {
@@ -83,4 +85,28 @@ int GlobalHandler::toolBarRequest(const QString& eventId, const QString& params)
              << ", 事件参数:" << params;
     emit toolBarRequestEvent(eventId, params);
     return 0;
+}
+
+QString GlobalHandler::getFilePath(const QString& fileName) {
+    qDebug() << "GlobalHandler::getFilePath params, fileName:" << fileName;
+
+    int pos = fileName.lastIndexOf("/");
+    if (pos >= 0) {
+        return fileName.left(pos + 1);
+    }
+
+    return QString("");
+}
+
+int GlobalHandler::jsonFileFormat(const QString& inputFileName,
+                   const QString& outputFileName) {
+    int ret = base::TextUtil::jsonFileFormat(inputFileName, outputFileName);
+    qDebug() << "GlobalHandler::jsonFileFormat JSON文件格式化状态:" << ret \
+             << ", 输入文件:" << inputFileName   \
+             << ", 输出文件:" << outputFileName;
+    return ret;
+}
+
+QString GlobalHandler::fileNameToNative(const QString& fileName) {
+    return base::FileUtil::fileNameToNative(fileName);
 }

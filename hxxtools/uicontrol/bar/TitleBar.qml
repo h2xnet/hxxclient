@@ -205,8 +205,8 @@ Rectangle {
         borderVisiable: systemMenuMaxBtnBorderVisiable
         hoverBorderVisiable: systemMenuMaxBtnHoverBorderVisiable
 
-        borderWidth: systemMenuMinBtnBorderWidth
-        borderColor: systemMenuMinBtnBorderColor
+        borderWidth: systemMenuMaxBtnBorderWidth
+        borderColor: systemMenuMaxBtnBorderColor
 
         backgroundColor: systemMenuMaxBtnBackgroundColor
 
@@ -242,8 +242,8 @@ Rectangle {
         borderVisiable: systemMenuCloseBtnBorderVisiable
         hoverBorderVisiable: systemMenuCloseBtnHoverBorderVisiable
 
-        borderWidth: systemMenuMinBtnBorderWidth
-        borderColor: systemMenuMinBtnBorderColor
+        borderWidth: systemMenuCloseBtnBorderWidth
+        borderColor: systemMenuCloseBtnBorderColor
 
         backgroundColor: systemMenuCloseBtnBackgroundColor
 

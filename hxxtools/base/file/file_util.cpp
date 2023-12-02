@@ -61,5 +61,14 @@ bool FileUtil::fileIsExist(const QString& fileName) {
     return file.exists();
 }
 
+QString FileUtil::fileNameToNative(const QString& fileName) {
+    // "file:///D:/curProject/h2x/ainav/data/dbtarget.json"
+    QString strKey1("file:///");
+    if (fileName.startsWith(strKey1)) {
+        return fileName.mid(strKey1.size());
+    }
+    return fileName;
+}
+
 
 } // end namespace base

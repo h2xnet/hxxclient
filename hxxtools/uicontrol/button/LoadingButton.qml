@@ -18,6 +18,9 @@ Rectangle {
     property int borderRadius: 4
     property int labelTextFontSize: 20
 
+    property int btnWidth: containerId.height
+    property int btnHeight: containerId.height
+
     //
     // setLoadingState : 设置加载状态
     //

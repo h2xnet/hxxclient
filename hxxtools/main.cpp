@@ -125,6 +125,14 @@ int main(int argc, char *argv[])
     ret = getApp()->init(argc, argv);
     qInfo() << "应用初始化结果:" << ret;
 
+
+   // QString str1 = "abcd\r\nefg";
+   // int pos1 = str1.indexOf("d", 0);
+   // int pos2 = str1.indexOf("\r\n", pos1 + 1);
+   // qInfo() << "main str1:" << str1 \
+    //        << ", pos1:" << pos1    \
+    //        << ", pos2:" << pos2;
+
     // 系统托盘
     qmlRegisterType<MyMenu>("hxxTools.net.pc", 1, 0, "MyMenu");
     qmlRegisterType<MyAction>("hxxTools.net.pc", 1, 0, "MyAction");

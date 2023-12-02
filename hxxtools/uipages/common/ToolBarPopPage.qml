@@ -97,8 +97,8 @@ Popup {
                 borderVisiable: systemMenuCloseBtnBorderVisiable
                 hoverBorderVisiable: systemMenuCloseBtnHoverBorderVisiable
 
-                borderWidth: systemMenuMinBtnBorderWidth
-                borderColor: systemMenuMinBtnBorderColor
+                borderWidth: systemMenuCloseBtnBorderWidth
+                borderColor: systemMenuCloseBtnBorderColor
 
                 backgroundColor: systemMenuCloseBtnBackgroundColor
 
